@@ -1,0 +1,11 @@
+ul {
+  list-style: none;
+  margin: 3%;
+  border-color: #0b97c4;
+  padding: 3%;
+
+}
+
+.icon {
+  cursor: pointer;
+}
