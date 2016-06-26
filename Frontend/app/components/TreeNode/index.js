@@ -42,7 +42,7 @@ var TreeNode = React.createClass({
     }
       
       if (this.state.replying){
-          replyBox = <ReplyBox />
+          replyBox = <ReplyBox commentId={this.props.node.id}/>
       }
 
     return (
