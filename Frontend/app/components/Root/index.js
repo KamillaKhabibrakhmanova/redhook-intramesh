@@ -15,6 +15,7 @@ var Root = React.createClass({
     },
 
     toggle: function(e) {
+    	e.preventDefault();
         this.setState({isVisible: !this.state.isVisible});
 
     },
@@ -46,7 +47,7 @@ var Root = React.createClass({
 	                        </div>
 	                    </div>
                    </div>
-                <ul>{nodes}</ul>
+                <ul className='node-container'>{nodes}</ul>
             </div>
         );
     }
