@@ -19,13 +19,10 @@ var TreeNode = React.createClass({
 
   render: function() {
     var icon = this.state.isVisible ? '-' : '+';
-    var span;
     var nodes;
 
 
     if (this.props.children) {
-      span = <span className="icon" >{icon}</span>;
-
       if (this.state.isVisible) {
         nodes = this.props.children.map((i) => <TreeNode node={i} children={i.children} />);
       }
@@ -34,13 +31,27 @@ var TreeNode = React.createClass({
     return (
       <div>
       <li style={styles} onClick={this.toggle}>
-        {span}
-        {this.props.node.name}
-        <br/>
-        {this.props.node.comment}
+        <div class='post clearfix reply' id='2'>
+          <div class='quote-level'>
+            <div class='message-container'>
+              <div class='person-container'>
+                <div class='name'>this.props.node.name</div>
+              </div>
+              <div class='date-container'>
+                <div class='time'>5:25PM</div>
+                <div class='date'>6/25/16</div>
+              </div>
+              <div class='message'>this.props.node.comment</div>
+              <footer>
+                <div class='reply-button'><a href='#'><img src='/images/reply.gif' width="25" border='0' /></a></div>
+                <div class='load-replies-container'><a  href='#'>Load Replies</a></div>
+              </footer>
+            </div>
+          </div>
+        </div>
       </li>
         <ul>{nodes}</ul>
-        </div>
+      </div>
     );
   }
 });
