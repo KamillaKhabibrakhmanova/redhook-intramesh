@@ -9,6 +9,7 @@ import classNames from 'classnames'
 import styles from './styles.sass';
 
 
+
 var TreeNode = React.createClass({
   getInitialState: function() {
     return {isVisible: false};
@@ -43,7 +44,7 @@ var TreeNode = React.createClass({
               </div>
               <div className='message'>{this.props.node.comment}</div>
               <footer>
-                <div className='reply-button'><a href='#'><img src='/images/reply.gif' width="25" border='0' /></a></div>
+                <div className='reply-button'><a href='#'><div className='reply-button-base64'></div></a></div>
                 <div className='load-replies-container'><a  href='#'>Load Replies</a></div>
               </footer>
             </div>
