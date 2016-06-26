@@ -8,7 +8,7 @@
  * reloading is not a neccessity for you then you can refactor it and remove
  * the linting exception.
  */
-var tree = [
+var json = [
   {
     id: 1,
     name: 'Bob',
@@ -61,16 +61,16 @@ var tree = [
 
 import React from 'react';
 import TreeNode from 'components/TreeNode'
+import Root from 'components/Root'
 
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.tree = tree;
+    this.json = json;
   }
   render() {
-    var nodes = this.tree.map((i) => <TreeNode node={i} children={i.children} />)
     return (
-      <ul>{nodes}</ul>
+      <Root tree = {this.json} />
     );
   }
 }
