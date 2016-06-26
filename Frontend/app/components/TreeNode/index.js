@@ -14,7 +14,7 @@ var TreeNode = React.createClass({
   getInitialState: function() {
     return {isVisible: true, replying: false};
   },
-
+  
   toggle: function(e) {
     e.preventDefault()
     this.setState({isVisible: !this.state.isVisible});
@@ -40,9 +40,9 @@ var TreeNode = React.createClass({
     }
 
     if(this.props.children) {
-        showReplies = <div className='load-replies-container'><a onClick={this.toggle} href='#'>Show/Hide Replies</a></div>; 
+        showReplies = <div className='load-replies-container'><a onClick={this.toggle} href='#'>Show/Hide Replies</a></div>;
     }
-      
+
       if (this.state.replying){
           replyBox = <ReplyBox commentId={this.props.node.id}/>
       }
