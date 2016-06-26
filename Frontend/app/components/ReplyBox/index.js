@@ -20,6 +20,7 @@ const ReplyBox = React.createClass({
   },
 
   handleChange(e) {
+    e.preventDefault();
     this.setState({ value: e.target.value });
   },
 
