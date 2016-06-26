@@ -9,7 +9,6 @@ import classNames from 'classnames'
 import styles from './styles.sass';
 
 
-
 var TreeNode = React.createClass({
   getInitialState: function() {
     return {isVisible: false};
