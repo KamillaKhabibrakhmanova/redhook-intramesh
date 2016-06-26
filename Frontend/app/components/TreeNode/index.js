@@ -30,10 +30,10 @@ var TreeNode = React.createClass({
 
     return (
       <div>
-      <li style={styles} onClick={this.toggle}>
+
         <div className='post clearfix reply'>
           <div className='quote-level'>
-            <div className='message-container'>
+            <div className='message-container' >
               <div className='person-container'>
                 <div className='name'>{this.props.node.name}</div>
               </div>
@@ -44,12 +44,11 @@ var TreeNode = React.createClass({
               <div className='message'>{this.props.node.comment}</div>
               <footer>
                 <div className='reply-button'><a href='#'><div className='reply-button-base64'></div></a></div>
-                <div className='load-replies-container'><a  href='#'>Load Replies</a></div>
+                <div className='load-replies-container'><a onClick={this.toggle} href='#'>Load Replies</a></div>
               </footer>
             </div>
           </div>
         </div>
-      </li>
         <ul>{nodes}</ul>
       </div>
     );

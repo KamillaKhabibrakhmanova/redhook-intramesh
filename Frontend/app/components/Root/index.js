@@ -16,6 +16,7 @@ var Root = React.createClass({
 
     toggle: function(e) {
         this.setState({isVisible: !this.state.isVisible});
+
     },
 
     render: function() {
@@ -30,13 +31,21 @@ var Root = React.createClass({
 
         return (
             <div>
-                <li style={styles} onClick={this.toggle}>
                     <div className='post clearfix reply'>
-                        <div className='quote-level'>
-                            foobar
-                        </div>
-                    </div>
-                </li>
+                    	<div className="message-container">
+	                    	<div className="person-container">
+	                    		<div className='name'>{this.props.node.name}</div>
+	                    	</div>
+	                    	<div className='date-container'>
+	                    	  <div className='time'>{this.props.node.time}</div>
+	                    	  <div className='date'>{this.props.node.date}</div>
+	                    	</div>
+	                        <div className='subject'>
+	                            {this.props.node.comment}
+	                            <a onClick={this.toggle}>+</a>
+	                        </div>
+	                    </div>
+                   </div>
                 <ul>{nodes}</ul>
             </div>
         );

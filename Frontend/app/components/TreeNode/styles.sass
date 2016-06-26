@@ -48,15 +48,7 @@ header
 
 .message-thread-container
   padding-right: 10px
-  .subject
-    font-size: 1.75em
-    font-weight: bold
-    float: left
-    margin-bottom: 5px
-    width: 100%
-    background-color: #F8FFD3
-    padding: 4px 
-    border: 1px solid $lightGray
+  
 
 
   
@@ -65,67 +57,83 @@ header
   clear: both
   margin-bottom: 40px
   width: 100%
+  .subject
+    font-size: 1.75em
+    font-weight: bold
+    float: left
+    margin-bottom: 5px
+    max-width: 750px
+    width: 100%
+    background-color: #F8FFD3
+    padding: 4px 
+    border: 1px solid $lightGray
+    a 
+      margin: 0 10px
+      font-size: 1.25em
+      float: right
+      margin-top: -8px
+
+
   .quote-level
     background: url("/images/reply-bar.01.gif") repeat-y top left
     float: left
 
-    .message-container
-      max-width: 440px
-      background-color: $backgroundColor
+  .message-container
+    max-width: 440px
+    background-color: $backgroundColor
+    float: left
+    margin-left: 0px
+    padding-left: 5px
+    .person-container 
       float: left
-      margin-left: 0px
-      padding-left: 5px
-      .person-container 
+      width: 50%
+      padding: 5px 0 0 8px
+      div 
         float: left
-        width: 50%
-        padding: 5px 0 0 8px
-        div 
-          float: left
-        .name
-          font-size: 1.1em
-          font-weight: bold
-          float: left
-          margin-right: 10px
-        .phone
-          color: $mediumGray
-          font-size: $fontSizeSmall
-      .date-container 
-        padding: 10px 8px 0 0
+      .name
+        font-size: 1.1em
+        font-weight: bold
+        float: left
+        margin-right: 10px
+      .phone
+        color: $mediumGray
+        font-size: $fontSizeSmall
+    .date-container 
+      padding: 10px 8px 0 0
+      float: right
+      div
         float: right
-        div
-          float: right
-          color: $mediumGray
-          font-size: $fontSizeSmall
-          margin-left: 6px
-      .message
-        clear: both
-        background-color: #3DD9E7
-        border-radius: 10px
-        padding: 10px
-        
-      .contact-container div 
-        float: left
-        margin-right: 5px
+        color: $mediumGray
+        font-size: $fontSizeSmall
+        margin-left: 6px
+    .message
+      clear: both
+      background-color: #3DD9E7
+      border-radius: 10px
+      padding: 10px
+      
+    .contact-container div 
+      float: left
+      margin-right: 5px
 
-      footer
-        padding-left: 6px  
-        .reply-button
-          float: left 
-          width: 25px
-          .reply-button-base64
-             background:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzQxRUMyMDczMzc1MTFFNjlBNzlEMkE5MjY3RjQ0QjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzQxRUMyMDgzMzc1MTFFNjlBNzlEMkE5MjY3RjQ0QjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozNDFFQzIwNTMzNzUxMUU2OUE3OUQyQTkyNjdGNDRCMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozNDFFQzIwNjMzNzUxMUU2OUE3OUQyQTkyNjdGNDRCMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkUIk54AAAEZSURBVHja3JWxDkRAEIbPRSIRUQiVQudldJ5Bq/EEetFQqBU6lSchoqIWrZBoJG6STcSx1u1Fcsn9zdrMzJfdmT+LWZblcZOej/tEzeq67jaWqqphGOJjC6V4nocqwzCOoS9ZIFmW9yyCRFEsiuKMhTTP8zUrz3OUMU2T4ziCIJxllmX5xsJep+97RVE+GUgQBCSW7/tU84Vp4Fme51GBdF3Hn2scRyqQZVmn/dI0bc2DwSdJAu1f58Bx3BaUpul+jkebSJI0DAPBX6C2bTH+WvdN08DWdd1Lr2J8vwvEcZxlGdn3qNOgKIqqqjplYe+1lW3b6MM0TSis65rUrw+FCresn76FBLFoYRjm9+faPjXsv/yHCHoJMADCZGEgmBpbOQAAAABJRU5ErkJggg==')
-             width: 25px
-             height: 25px
-        .load-replies-container
-          float: right 
-          margin-right: 10px
-          padding-top: 4px
-          a 
-            color: #000
-            font-weight: bold
+    footer
+      padding-left: 6px  
+      .reply-button
+        float: left 
+        width: 25px
+        .reply-button-base64
+           background:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzQxRUMyMDczMzc1MTFFNjlBNzlEMkE5MjY3RjQ0QjIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MzQxRUMyMDgzMzc1MTFFNjlBNzlEMkE5MjY3RjQ0QjIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDozNDFFQzIwNTMzNzUxMUU2OUE3OUQyQTkyNjdGNDRCMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDozNDFFQzIwNjMzNzUxMUU2OUE3OUQyQTkyNjdGNDRCMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkUIk54AAAEZSURBVHja3JWxDkRAEIbPRSIRUQiVQudldJ5Bq/EEetFQqBU6lSchoqIWrZBoJG6STcSx1u1Fcsn9zdrMzJfdmT+LWZblcZOej/tEzeq67jaWqqphGOJjC6V4nocqwzCOoS9ZIFmW9yyCRFEsiuKMhTTP8zUrz3OUMU2T4ziCIJxllmX5xsJep+97RVE+GUgQBCSW7/tU84Vp4Fme51GBdF3Hn2scRyqQZVmn/dI0bc2DwSdJAu1f58Bx3BaUpul+jkebSJI0DAPBX6C2bTH+WvdN08DWdd1Lr2J8vwvEcZxlGdn3qNOgKIqqqjplYe+1lW3b6MM0TSis65rUrw+FCresn76FBLFoYRjm9+faPjXsv/yHCHoJMADCZGEgmBpbOQAAAABJRU5ErkJggg==')
+           width: 25px
+           height: 25px
+      .load-replies-container
+        float: right 
+        margin-right: 10px
+        padding-top: 4px
+        a 
+          color: #000
+          font-weight: bold
 
-.treeRoot
-  background-color: red
+
 
 
 
