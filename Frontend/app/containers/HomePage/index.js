@@ -70,7 +70,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   }
   render() {
     return (
-      <Root tree = {this.json} />
+      <Root list = {this.json} />
     );
   }
 }
