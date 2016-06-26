@@ -41,7 +41,15 @@ export default function createRoutes() {
           .catch(errorLoading);
       },
     }, {
+      path: '/front',
+      getComponent(location, cb) {
+        System.import('containers/FrontPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
       path: '*',
+
 
       name: 'notfound',
       getComponent(nextState, cb) {

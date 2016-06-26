@@ -1,18 +1,18 @@
 /*
  *
- * About
+ * FrontPaget
  *
  */
 
 import React from 'react';
 import { connect } from 'react-redux';
 import styles from './styles.css';
-import htmlContent from './about.html'
+import htmlContent from './welcome.html'
 
-export class About extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class FrontPaget extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className={styles.about}>
+      <div className={styles.frontPaget}>
         <div dangerouslySetInnerHTML={ {__html: htmlContent} } />
       </div>
     );
@@ -26,4 +26,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapDispatchToProps)(About);
+export default connect(mapDispatchToProps)(FrontPaget);
