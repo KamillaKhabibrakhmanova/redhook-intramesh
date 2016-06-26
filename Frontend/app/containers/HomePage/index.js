@@ -69,8 +69,12 @@ export default class HomePage extends React.Component { // eslint-disable-line r
     this.json = json;
   }
   render() {
-    return (
-      <Root list = {this.json} />
-    );
+      var threads = this.json.map((i) =>
+          <Root node={i} children={i.children} />)
+      return (
+          <div >
+              <ul>{threads}</ul>
+          </div>
+      );
   }
 }
