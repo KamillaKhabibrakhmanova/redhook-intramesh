@@ -1,0 +1,142 @@
+
+$lightGray: #CCC
+$mediumGray: #666
+$darkGray: #333
+$fontSizeSmall: 9pt
+$backgroundColor: #F4F7F7
+
+@mixin divider
+  border-bottom: 1px solid $lightGray
+  margin-bottom: 30px
+
+
+.clearfix:after 
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0
+     
+.clearfix  
+  display: inline-block 
+* html .clearfix  
+  height: 1% 
+.clearfix  
+  display: block 
+
+
+.container
+  max-width: 960px
+  margin: 0 10px
+
+a:hover
+  text-decoration: none
+
+body
+  background-color: $backgroundColor
+ 
+header
+  @include divider
+
+.button
+  background-color: $darkGray
+  padding: 5px 10px
+  max-width: 120px
+  color: #FFF 
+
+.message-thread-container
+  padding-right: 10px
+  .subject
+    font-size: 1.75em
+    font-weight: bold
+    float: left
+    margin-bottom: 5px
+    width: 100%
+    background-color: #F8FFD3
+    padding: 4px 
+    border: 1px solid $lightGray
+
+
+  
+
+  .post
+    clear: both
+    margin-bottom: 40px
+    width: 100%
+    .quote-level
+      background: url("/images/reply-bar.01.gif") repeat-y top left
+      float: left
+
+      .message-container
+        max-width: 440px
+        background-color: $backgroundColor
+        float: left
+        margin-left: 0px
+        padding-left: 5px
+        .person-container 
+          float: left
+          width: 50%
+          padding: 5px 0 0 8px
+          div 
+            float: left
+          .name
+            font-size: 1.1em
+            font-weight: bold
+            float: left
+            margin-right: 10px
+          .phone
+            color: $mediumGray
+            font-size: $fontSizeSmall
+        .date-container 
+          padding: 10px 8px 0 0
+          float: right
+          div
+            float: right
+            color: $mediumGray
+            font-size: $fontSizeSmall
+            margin-left: 6px
+        .message
+          clear: both
+          background-color: #3DD9E7
+          border-radius: 10px
+          padding: 10px
+          
+        .contact-container div 
+          float: left
+          margin-right: 5px
+
+        footer
+          padding-left: 6px  
+          .reply-button
+            float: left 
+            width: 25px
+          .load-replies-container
+            float: right 
+            margin-right: 10px
+            padding-top: 4px
+            a 
+              color: #000
+              font-weight: bold
+
+
+
+
+.filter-container
+  font-size: 1.25em
+  margin-bottom: 30px
+
+#html-store
+  display: none
+
+.reply-container
+  clear: both
+  margin-top: 35px
+  input, textarea 
+    width: 100%
+  input[type="submit"]
+    background-color: $lightGray
+    font-weight: bold
+    padding: 5px 0px
+
+
