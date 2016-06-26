@@ -31,15 +31,15 @@ var TreeNode = React.createClass({
     return (
       <div>
       <li style={styles} onClick={this.toggle}>
-        <div class='post clearfix reply' id='2'>
+        <div class='post clearfix reply'>
           <div class='quote-level'>
             <div class='message-container'>
               <div class='person-container'>
                 <div class='name'>{this.props.node.name}</div>
               </div>
               <div class='date-container'>
-                <div class='time'>5:25PM</div>
-                <div class='date'>6/25/16</div>
+                <div class='time'>{this.props.node.time}</div>
+                <div class='date'>{this.props.node.date}</div>
               </div>
               <div class='message'>{this.props.node.comment}</div>
               <footer>
