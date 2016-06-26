@@ -76,7 +76,7 @@ export default class HomePage extends React.Component { // eslint-disable-line r
   }
   render() {
       var threads = this.json.map((i) =>
-          <Root node={i} children={i.children} />)
+          <Root node={i} key={i} children={i.children} />)
       return (
           <div >
               <ul>{threads}</ul>

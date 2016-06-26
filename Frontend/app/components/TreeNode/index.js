@@ -11,7 +11,7 @@ import styles from './styles.sass';
 
 var TreeNode = React.createClass({
   getInitialState: function() {
-    return {isVisible: false};
+    return {isVisible: true};
   },
 
   toggle: function(e) {
@@ -28,7 +28,7 @@ var TreeNode = React.createClass({
 
     if (this.props.children) {
       if (this.state.isVisible) {
-        nodes = this.props.children.map((i) => <TreeNode node={i} children={i.children} />);
+        nodes = this.props.children.map((i) => <TreeNode level={this.props.level + 1} node={i} children={i.children} />);
       }
     }
 
@@ -40,7 +40,7 @@ var TreeNode = React.createClass({
 
         <div className='post clearfix reply'>
           <div className='quote-level'>
-            <div className={"message-container level-" +this.props.node.n} style={{marginLeft: this.props.node.n + 'em'}}  >
+            <div className={"message-container level-" +this.props.level} style={{marginLeft: this.props.level + 'em'}}  >
               <div className='person-container'>
                 <div className='name'>{this.props.node.name}</div>
               </div>

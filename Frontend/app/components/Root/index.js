@@ -25,7 +25,7 @@ var Root = React.createClass({
 
         if (this.props.children) {
             if (this.state.isVisible) {
-                nodes = this.props.children.map((i) => <TreeNode node={i} children={i.children} />);
+                nodes = this.props.children.map((i) => <TreeNode level={1} node={i} children={i.children} />);
             }
         }
 
