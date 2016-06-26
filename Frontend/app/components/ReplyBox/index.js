@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import {FormGroup, FormControl, HelpBlock} from 'react-bootstrap'
+import {FormGroup, FormControl, HelpBlock, Button} from 'react-bootstrap'
 import styles from './styles.css';
 
 const ReplyBox = React.createClass({
@@ -38,6 +38,9 @@ const ReplyBox = React.createClass({
             />
             <HelpBlock>Validation is based on string length.</HelpBlock>
           </FormGroup>
+          <Button type="submit">
+            Submit
+          </Button>
         </form>
     );
   }
