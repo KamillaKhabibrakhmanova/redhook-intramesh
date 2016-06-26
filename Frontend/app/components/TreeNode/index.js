@@ -7,19 +7,24 @@
 import React from 'react';
 import classNames from 'classnames'
 import styles from './styles.sass';
+import ReplyBox from 'components/ReplyBox'
 
 
 var TreeNode = React.createClass({
   getInitialState: function() {
-    return {isVisible: true};
+    return {isVisible: true, replying: false};
   },
 
   toggle: function(e) {
     this.setState({isVisible: !this.state.isVisible});
   },
 
+  reply: function(e) {
+      this.setState({replying: !this.state.replying});
+  },
+
   render: function() {
-    var nodes,showReplies;
+    var nodes,showReplies, replyBox;
 
     var divStyle = function(n){
       return "margin-left: " + n*5 + 'px'
@@ -32,8 +37,13 @@ var TreeNode = React.createClass({
       }
     }
 
-    if(this.props.children)   showReplies = <div className='load-replies-container'><a onClick={this.toggle} href='#'>Load Replies</a></div>;
-    else                      showReplies = "";
+    if(this.props.children) {
+        showReplies = <div className='load-replies-container'><a onClick={this.toggle} href='#'>Load Replies</a></div>;
+    }
+      
+      if (this.state.replying){
+          replyBox = <ReplyBox />
+      }
 
     return (
       <div>
@@ -50,7 +60,8 @@ var TreeNode = React.createClass({
               </div>
               <div className='message'>{this.props.node.comment}</div>
               <footer>
-                <div className='reply-button'><a href='#'><div className='reply-button-base64'></div></a></div>
+                <div className='reply-button'><a onClick={this.reply} href='#'><div className='reply-button-base64'></div></a></div>
+                  { replyBox }
                 { showReplies }
               </footer>
             </div>
