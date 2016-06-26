@@ -19,7 +19,11 @@ var TreeNode = React.createClass({
   },
 
   render: function() {
-    var nodes;
+    var nodes,showReplies;
+
+    var divStyle = function(n){
+      return "margin-left: " + n*5 + 'px'
+    };
 
 
     if (this.props.children) {
@@ -28,12 +32,15 @@ var TreeNode = React.createClass({
       }
     }
 
+    if(this.props.children)   showReplies = <div className='load-replies-container'><a onClick={this.toggle} href='#'>Load Replies</a></div>;
+    else                      showReplies = "";
+
     return (
       <div>
 
         <div className='post clearfix reply'>
           <div className='quote-level'>
-            <div className='message-container' >
+            <div className='message-container' style={{marginLeft: this.props.node.n + 'em'}}  >
               <div className='person-container'>
                 <div className='name'>{this.props.node.name}</div>
               </div>
@@ -44,7 +51,7 @@ var TreeNode = React.createClass({
               <div className='message'>{this.props.node.comment}</div>
               <footer>
                 <div className='reply-button'><a href='#'><div className='reply-button-base64'></div></a></div>
-                <div className='load-replies-container'><a onClick={this.toggle} href='#'>Load Replies</a></div>
+                { showReplies }
               </footer>
             </div>
           </div>
