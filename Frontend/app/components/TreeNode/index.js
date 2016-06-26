@@ -40,7 +40,7 @@ var TreeNode = React.createClass({
 
         <div className='post clearfix reply'>
           <div className='quote-level'>
-            <div className='message-container' style={{marginLeft: this.props.node.n + 'em'}}  >
+            <div className={"message-container level-" +this.props.node.n} style={{marginLeft: this.props.node.n + 'em'}}  >
               <div className='person-container'>
                 <div className='name'>{this.props.node.name}</div>
               </div>
